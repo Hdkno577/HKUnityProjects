@@ -25,4 +25,11 @@ public class BallController : MonoBehaviour
         Vector3 movement = new Vector3(moveX, 0.0f, moveY);
         rb.AddForce(movement * speed);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }
