@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gallons: 0
-  m_size: 0
+  m_size: 100
 --- !u!114 &459491847
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,8 +21,14 @@ public class BarrelScript : MonoBehaviour
         if (m_gallons < 0)
             m_gallons = 0;
     }
-    void OnMove()
+    void OnMove(InputValue movementValue)
     {
-        Debug.Log("Hello");
+        Vector2 movementVector = movementValue.Get<Vector2>();
+        Debug.Log(movementVector.x + "," + movementVector.y);
+        if (movementVector.y == 1)
+            fill( (int)(m_size * 0.1));
+
+        if (movementVector.y == -1)
+            drain( (int)(m_size * 0.1));
     }
 }
