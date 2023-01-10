@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class BarrelScript : MonoBehaviour
 {
+    public GameObject Player;
+    //public PlayerControler playercontroller;
+
     public int m_gallons;
     public int m_size;
 
@@ -13,6 +16,7 @@ public class BarrelScript : MonoBehaviour
         m_gallons += gallons;
         if (m_gallons > m_size)
             m_gallons = m_size;
+        //gameObject.tramsform.localScale += new Vector3(0, 0, m_gallons);
     }
 
     public void drain(int gallons)
@@ -20,6 +24,7 @@ public class BarrelScript : MonoBehaviour
         m_gallons -= gallons;
         if (m_gallons < 0)
             m_gallons = 0;
+        //gameObject.tramsform.localScale -= new Vector3(0, 0, m_gallons);
     }
     void OnMove(InputValue movementValue)
     {
