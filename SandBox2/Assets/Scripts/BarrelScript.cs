@@ -17,4 +17,9 @@ public class BarrelScript : MonoBehaviour
     {
         
     }
+
+    void OnMove()
+    {
+
+    }
 }
